@@ -9,7 +9,7 @@ func TestCodegenComment(t *testing.T) {
 		out string
 	}{
 		{[]string{"file_1.avsc", "file_2.avsc"}, `/*
- * CODE GENERATED AUTOMATICALLY WITH github.com/alanctgardner/gogen-avro
+ * CODE GENERATED AUTOMATICALLY WITH github.com/peay/gogen-avro
  * THIS FILE SHOULD NOT BE EDITED BY HAND
  *
  * SOURCES:
@@ -17,7 +17,7 @@ func TestCodegenComment(t *testing.T) {
  *     file_2.avsc
  */`},
 		{[]string{"file_1.avsc"}, `/*
- * CODE GENERATED AUTOMATICALLY WITH github.com/alanctgardner/gogen-avro
+ * CODE GENERATED AUTOMATICALLY WITH github.com/peay/gogen-avro
  * THIS FILE SHOULD NOT BE EDITED BY HAND
  *
  * SOURCE:

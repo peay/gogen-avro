@@ -1,9 +1,9 @@
 gogen-avro
 ===
 
-[![Build Status](https://travis-ci.org/alanctgardner/gogen-avro.svg?branch=master)](https://travis-ci.org/alanctgardner/gogen-avro)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/alanctgardner/gogen-avro/master/LICENSE)
-[![Version 4.0.1](https://img.shields.io/badge/version-4.0.1-lightgrey.svg)](https://gopkg.in/alanctgardner/gogen-avro.v4)
+[![Build Status](https://travis-ci.org/peay/gogen-avro.svg?branch=master)](https://travis-ci.org/peay/gogen-avro)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/peay/gogen-avro/master/LICENSE)
+[![Version 4.0.1](https://img.shields.io/badge/version-4.0.1-lightgrey.svg)](https://gopkg.in/peay/gogen-avro.v4)
 
 Generate Go structures and serializer / deserializer methods from Avro schemas. Generated serializers/deserializers are 2-8x faster than goavro, and you get compile-time safety for getting and setting fields.
 
@@ -12,7 +12,7 @@ Generate Go structures and serializer / deserializer methods from Avro schemas. 
 gogen-avro is a tool which you install on your system (usually on your GOPATH), and run as part of your build process. To install gogen-avro to `$GOPATH/bin/`, run:
 
 ```
-go get github.com/alanctgardner/gogen-avro/...
+go get github.com/peay/gogen-avro/...
 ```
 
 ### Usage
@@ -23,7 +23,7 @@ To generate Go source files from one or more Avro schema files, run:
 gogen-avro [--package=<package name>] <output directory> <avro schema files>
 ```
 
-You can also use a `go:generate` directive in a source file ([example](https://github.com/alanctgardner/gogen-avro/blob/master/test/primitive/schema_test.go)):
+You can also use a `go:generate` directive in a source file ([example](https://github.com/peay/gogen-avro/blob/master/test/primitive/schema_test.go)):
 
 ```
 //go:generate $GOPATH/bin/gogen-avro . primitives.avsc
@@ -43,7 +43,7 @@ The `WriteRecord` method in `container.Writer` accepts an `AvroRecord`, which is
 
 An example of how to write a container file can be found in `example/container/example.go`.
 
-[Godocs for the container package](https://godoc.org/github.com/alanctgardner/gogen-avro/container)
+[Godocs for the container package](https://godoc.org/github.com/peay/gogen-avro/container)
 
 ### Example
 
@@ -51,11 +51,11 @@ The `example` directory contains simple example projects with an Avro schema. On
 
 ```
 # Build the Go source files from the Avro schema using the generate directive
-go generate github.com/alanctgardner/gogen-avro/example
+go generate github.com/peay/gogen-avro/example
 
 # Install the example projects on the gopath
-go install github.com/alanctgardner/gogen-avro/example/record
-go install github.com/alanctgardner/gogen-avro/example/container
+go install github.com/peay/gogen-avro/example/record
+go install github.com/peay/gogen-avro/example/container
 ```
 
 ### Naming

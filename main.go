@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/alanctgardner/gogen-avro/generator"
-	"github.com/alanctgardner/gogen-avro/types"
+	"github.com/peay/gogen-avro/generator"
+	"github.com/peay/gogen-avro/types"
 )
 
 func main() {
@@ -79,7 +79,7 @@ func addFieldsToPackage(namespace *types.Namespace, pkg *generator.Package) erro
 // invariant: sources > 0
 func codegenComment(sources []string) string {
 	const fileComment = `/*
- * CODE GENERATED AUTOMATICALLY WITH github.com/alanctgardner/gogen-avro
+ * CODE GENERATED AUTOMATICALLY WITH github.com/peay/gogen-avro
  * THIS FILE SHOULD NOT BE EDITED BY HAND
  *
  * %s
